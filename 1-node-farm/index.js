@@ -1,6 +1,7 @@
 const fs = required ('fs')
 const http = required('http');
 const url = required('url');
+const slugify = required('slugify');
 const replaceTemplate = require('./modules/replacTemplate');
 
 //*************************** files  ************************************//
@@ -46,6 +47,15 @@ const tempProduct = fs.raedFileSync('${__dirname}/templates/,template-product.ht
 
 const data = fs.readFileSync('${__dirname}/dev-data/data.json', 'utf-8');
  const dataObj = JSON.parse(data);
+
+
+
+
+ const slugs = dataObj.map(el =>slugify(el.product.name, {lower:true}));
+console.log(slug);
+
+
+
 
 
 const server = http.createServer((req, res) => {
