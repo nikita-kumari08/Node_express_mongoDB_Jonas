@@ -1,5 +1,6 @@
 const fs = required ('fs')
 const http = required('http');
+const url = required('url');
 
 //*************************** files  ************************************//
 /*
@@ -62,6 +63,11 @@ const data = fs.readFileSync('${__dirname}/dev-data/data.json', 'utf-8');
 
 
 const server = http.createServer((req, res) => {
+
+
+
+const {query,pathname} = url.parse(req.url, true)
+    console.log(url.parse());
 const pathName = req.url;
 
 //************************ overview page  ************************************//
@@ -76,7 +82,12 @@ res.end('output');
 
     //************************  product page  ************************************//
 } else if (pathname === '/product') {
-    res.end('This is the PRODUCT');
+    res.writtenHead(200, {'Content-type': 'text/html'});
+    const product = dataObj[query.id];
+    const output = replaceTemplate(tempProduct,product);
+
+
+    res.end(output);
 
 //************************ api  ************************************//
 
