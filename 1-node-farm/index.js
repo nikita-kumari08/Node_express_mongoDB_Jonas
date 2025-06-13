@@ -42,12 +42,19 @@ const data = fs.readFileSync('${__dirname}/dev-data/data.json', 'utf-8');
 const server = http.createServer((req, res) => {
 const pathName = req.url;
 
+//************************ overview page  ************************************//
+
 if(pathName === '/' || pathName === '/overview'){
     res.end('This is the OVERVIEW');
+
+
+    //************************  product page  ************************************//
 } else if (pathname === '/product') {
     res.end('This is the PRODUCT');
-} else if (pathName === '/api') {
 
+//************************ api  ************************************//
+
+} else if (pathName === '/api') {
 
 
     fs.readFile('$(__dirname)/dev-data/data.json', 'utf-8', (err, data) => {
