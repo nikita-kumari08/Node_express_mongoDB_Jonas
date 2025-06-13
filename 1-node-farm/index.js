@@ -70,11 +70,9 @@ if(pathName === '/' || pathName === '/overview'){
 res.writtenHead(200, {'Content-type': 'text/html'});
 
 
-const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el))
-console.log(cardsHtml);
-
-res.end('tempOverview');
-
+const cardsHtml = dataObj.map(el => replaceTemplate(tempCard, el)).join('');
+const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
+res.end('output');
 
     //************************  product page  ************************************//
 } else if (pathname === '/product') {
