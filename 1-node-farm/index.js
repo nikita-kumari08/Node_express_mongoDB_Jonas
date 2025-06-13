@@ -35,6 +35,10 @@ console.log('Will read file');
 
 //************************ server  ************************************//
 
+const data = fs.readFileSync('${__dirname}/dev-data/data.json', 'utf-8');
+ const dataObj = JSON.parse(data);
+
+
 const server = http.createServer((req, res) => {
 const pathName = req.url;
 
@@ -46,9 +50,13 @@ if(pathName === '/' || pathName === '/overview'){
 
 
 
-    fs.readFile('dev-data/data.json')
+    fs.readFile('$(__dirname)/dev-data/data.json', 'utf-8', (err, data) => {
+       const produtData = JSON.parse(data);
+        res.writtenHead(200, {'Content-type': 'application/json'});
+         res.end(data);
+    })
 
-    res.end('API');
+   
 } else {
     res.writeHead(404, {
         'Content-type': 'text/html',
