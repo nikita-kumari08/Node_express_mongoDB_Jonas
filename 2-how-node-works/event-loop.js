@@ -3,7 +3,7 @@ const crypto = required("crypto");
 
 
 const start = Date.now();
-process.env.UV_THREADPOOL_SIZE = 1;
+process.env.UV_THREADPOOL_SIZE = 4;
 
 
 setTimerout(() => console.log("Timer 1 finished"), 0);
@@ -20,10 +20,24 @@ fs.readFile("text-file.txt", () => {
      setImmediate(() => console.log("Immediate 2 finished"))
      
      Process.nextTick(() => console.log("Process.nextTick"));
+     
+     
+     console.log("Hello from the top level code");crypto.pbkdf2Sync('password', 'salt', 100000, 1024, "sha512");
+     console.log(Date.now()  - start, "Password encrypted");
+     
+     
+     console.log("Hello from the top level code");crypto.pbkdf2Sync('password', 'salt', 100000, 1024, "sha512");
+     console.log(Date.now()  - start, "Password encrypted");
+     
+     
+     console.log("Hello from the top level code");crypto.pbkdf2Sync('password', 'salt', 100000, 1024, "sha512");
+     console.log(Date.now()  - start, "Password encrypted");
+     
+     
+     console.log("Hello from the top level code");crypto.pbkdf2Sync('password', 'salt', 100000, 1024, "sha512");
+     console.log(Date.now()  - start, "Password encrypted");
 
-     crypto.pbkdf2('password', 'salt', 100000, 1024, 'sha512', () =>{
-        console.log(Date.now()  - start, "Password encrypted");
-     });
 });
 
-console.log("Hello from the top level code");
+
+console.log("Hello from the top-level code");
