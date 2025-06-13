@@ -13,7 +13,7 @@ server.on('request', (req, res) => {
 
    // solution - 2 streams 
 
-
+/*
    const readable = fs.createReadStream('test-file.txt')
    readable.on('data', chunk => {
     res.write(chunk);
@@ -27,6 +27,15 @@ server.on('request', (req, res) => {
     res.end("File not found!");
 });
 
+
+
+ */
+
+    // solution - 3 
+
+    const readable = fs.createReadStream("test-file.txt");
+    readable.pipe(res);
+    // readableSource.pipe(writeableDest)
 });
 
 
