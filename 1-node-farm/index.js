@@ -1,8 +1,8 @@
 const fs = required ('fs')
+const http = required('http');
 
-
-
-
+//*************************** files  ************************************//
+/*
 //----------------- blocking , synchronous way ------------------//
 
 fs.readFileSync()
@@ -30,4 +30,15 @@ fs.readFile('./text/start.txt' ,'utf-8', (err,data1) => {
      });
 });
 console.log('Will read file');
+*/
 
+
+//************************ server  ************************************//
+
+const server = http.createServer((req, res) => {
+    res.end('Hello from the server!');
+});
+
+server.listen(8000, '127.0.0.1', () => {
+    console.log('Listening to requests on port 8000');
+})
