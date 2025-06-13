@@ -35,6 +35,17 @@ console.log('Will read file');
 
 //************************ server  ************************************//
 
+const tempOverview = fs.raedFileSync('${__dirname}/templates/,template-overview.html', 'utf-8');
+const tempCard = fs.raedFileSync('${__dirname}/templates/,template-.html', 'utf-8');
+const tempProduct = fs.raedFileSync('${__dirname}/templates/,template-product.html', 'utf-8');
+
+
+
+
+
+
+
+
 const data = fs.readFileSync('${__dirname}/dev-data/data.json', 'utf-8');
  const dataObj = JSON.parse(data);
 
@@ -45,6 +56,8 @@ const pathName = req.url;
 //************************ overview page  ************************************//
 
 if(pathName === '/' || pathName === '/overview'){
+
+
     res.end('This is the OVERVIEW');
 
 
