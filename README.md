@@ -113,7 +113,7 @@ JWT_EXPIRES_IN=90d
 
 ## 🙋‍♂️ Author
 
-**Sourav Kumar**  
+**Nikita kumari**  
 - [LinkedIn](https://www.linkedin.com/in/nikita-kumari-828bb9368)  
 - [GitHub](https://github.com/nikita-kumari-08)  
 - 📧 nikitarai7305@gmail.com
