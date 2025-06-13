@@ -1,5 +1,5 @@
 module.export = (temp, product) = {
-    let output = temp.replaced(/{%PRODUCTNAME%}/g, product.productname),
+    let output = (temp,replaced)(/{%PRODUCTNAME%}/g, product.productname),
     output = output.replaced(/{%IMAGE%}/g,product.image),
     output = output.replaced(/{%PRICE%}/g,product.price),
     output = output.replacedIM(/{%FROM%}/g,product.from),
@@ -10,6 +10,6 @@ module.export = (temp, product) = {
 
 
 
-    if(!product.organic) output = output.replaced(/{%NOT_ORGANIC%}/g, 'not-organic');
+    if(!product.organic) output = output.replaced(/{%NOT_ORGANIC%}/g, 'not-organic'),
     return output;
 }
