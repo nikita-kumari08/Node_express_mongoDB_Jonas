@@ -27,6 +27,7 @@ const writeFilePro = (file, data) => {
 
 
 const getDogPic = async() => {
+    try {
     const data = await readFilePro(`${__dirname}/dog.txt`)
      console.log(`Breed: ${data}`);
 
@@ -39,6 +40,9 @@ const getDogPic = async() => {
      await writeFilePro('dog-ing.txt', res.body.message);
      console.log('Random dog image saved to file!');
 
+    } catch (err){
+        console.log(err);
+    }
 };
 getDogPic();
 
