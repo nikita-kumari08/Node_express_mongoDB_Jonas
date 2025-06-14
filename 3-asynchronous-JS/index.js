@@ -49,7 +49,7 @@ const getDogPic = async() => {
     try {
         console.log('1.Will get dog pics!');
         console.log('3: Done getting dog pics!');
-    } .catch(err) => {
+    } catch(err) {
     console.log('ERROR');
         }
 })();
