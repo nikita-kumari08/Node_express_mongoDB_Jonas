@@ -48,6 +48,8 @@ const getDogPic = async() => {
 (async () => {
     try {
         console.log('1.Will get dog pics!');
+        const x = await  getDogPic();
+        console.log(x);
         console.log('3: Done getting dog pics!');
     } catch(err) {
     console.log('ERROR');
