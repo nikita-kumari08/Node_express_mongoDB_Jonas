@@ -33,10 +33,7 @@ readFilePro(`${__dirname}/dog.txt`)
     .then(res => {
         console.log(res.body.messages);
         return writeFilePro('dog-ing.txt', res.body.message)
-            /*
-        fs.writeFile('dog-ing.txt', res.body.messsage, err => {
-            console.log('Random dog image saved to file!');
-        });*/
+         
     })
         .then(()  = {
             console.log('Random dog image saved to file!');
