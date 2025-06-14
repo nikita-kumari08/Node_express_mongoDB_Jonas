@@ -43,7 +43,15 @@ const getDogPic = async() => {
     } catch (err){
         console.log(err);
     }
+    return '2: READY';
 };
+
+
+console.log('1.Will get dog pics!');
+console.log = getDogPic();
+console.log(x);
+console.log('3: Done getting dog pics!');
+
 getDogPic();
 
 
