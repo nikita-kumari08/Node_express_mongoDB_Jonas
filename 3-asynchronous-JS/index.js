@@ -32,7 +32,20 @@ const getDogPic = async() => {
      console.log(`Breed: ${data}`);
 
 
-     const res = await superagent .get(`https://dog.ceo/api/breed/${data}/images/random`)
+     const res1Pro =  superagent .get
+     (`https://dog.ceo/api/breed/${data}/images/random`
+    );
+
+    const res2Pro =  superagent .get
+     (`https://dog.ceo/api/breed/${data}/images/random`
+     );
+     
+     const res3Pro =  superagent .get
+     (`https://dog.ceo/api/breed/${data}/images/random`
+     );   
+
+     const all = await promiseHooks.all([res1Pro, res2Pro, res3Pro])
+
      console.log(res.body.message);
 
 
