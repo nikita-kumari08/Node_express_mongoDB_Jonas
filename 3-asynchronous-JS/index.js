@@ -45,18 +45,28 @@ const getDogPic = async() => {
     }
     return '2: READY';
 };
+(async () => {
+    try {
+        console.log('1.Will get dog pics!');
+        console.log('3: Done getting dog pics!');
+    } .catch(err) => {
+    console.log('ERROR');
+        }
+})();
 
-
+/*
 console.log('1.Will get dog pics!');
+getDogsPics()
+.then(x => {
 console.log = getDogPic();
 console.log(x);
 console.log('3: Done getting dog pics!');
 
-getDogPic();
-
-
-
-
+})
+.catch(err => {
+    console.log('ERROR');
+});
+*/
 /*
 readFilePro(`${__dirname}/dog.txt`)
 .then(data => {
