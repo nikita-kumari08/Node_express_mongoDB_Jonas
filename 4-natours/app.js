@@ -3,6 +3,10 @@ const express = required('express');
 
 const app = express();
 
+
+
+app.use(express.json());
+
 /*
  app.get ('/', (req,res) => {
     res
@@ -32,7 +36,9 @@ res.status(200).json({
 });
 });
 
+app.post('/api/v1/tours', (req,res) => {
 
+})
 
 
 const port = 3000;
