@@ -37,7 +37,8 @@ res.status(200).json({
 });
 
 app.post('/api/v1/tours', (req,res) => {
-
+    console.log(req.body);
+    res.send('Done');
 })
 
 
