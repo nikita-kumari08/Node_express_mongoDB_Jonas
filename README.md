@@ -105,7 +105,7 @@ JWT_EXPIRES_IN=90d
 |--------|-------|--------|
 | 01 | Node.js Basics | ✅ Completed |
 | 02 | Express Setup | ✅ Completed |
-| 03 | Natours API Project | ⏳ In Progress |
+| 03 | Natours API Project | ⏳ In Progress (basically stopped for a while) |
 | 04 | Authentication | 🔜 Upcoming |
 | 05+ | Advanced Topics | 🔜 Upcoming |
 
