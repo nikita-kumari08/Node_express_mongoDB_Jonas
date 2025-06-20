@@ -120,3 +120,7 @@ JWT_EXPIRES_IN=90d
 
 ---
 
+## 📄 License
+
+This project is for educational and personal learning purposes only.  
+All course content is © Jonas Schmedtmann.
