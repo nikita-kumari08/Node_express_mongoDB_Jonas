@@ -6,7 +6,7 @@ The course focuses on building a production-ready RESTful API using modern backe
 
 ---
 
-## 📦 Course Repository
+## 📦 Course Reposito
 
 - 🔗 Official Starter Files: [jonasschmedtmann/complete-node-bootcamp](https://github.com/jonasschmedtmann/complete-node-bootcamp)
 - 📚 Course Link: [Udemy Course](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp)
